@@ -1,9 +1,13 @@
 #include "Camera.h"
 
-Camera::Camera(const glm::vec3& eye, const glm::vec3& lookAt, const glm::vec3& up, float fov, const glm::ivec2& screenSize)
+Camera::Camera(const glm::vec3& eye, const glm::vec3& lookAt, const glm::vec3& up, float fov, const glm::ivec2& screenSize, float aperature, float focalLength)
 {
 	this->screenSize = screenSize;
 	this->aspectRatio = (screenSize.x / (float)screenSize.y);
+
+	this->aperature = aperature;
+	this->focalLength = focalLength;
+	lensRadius = this->aperature / 2;
 
 	float theta = glm::radians(fov);
 	float h = tan(theta * 0.5f);

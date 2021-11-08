@@ -5,7 +5,7 @@ class Camera
 {
 public:
 	Camera() = default;
-	Camera(const glm::vec3& eye, const glm::vec3& lookAt, const glm::vec3& up, float fov, const glm::ivec2& screenSize);
+	Camera(const glm::vec3& eye, const glm::vec3& lookAt, const glm::vec3& up, float fov, const glm::ivec2& screenSize, float aperature, float focalLength);
 
 	void Set(const glm::vec3& eye, const glm::vec3& lookAt, const glm::vec3& up, float fov);
 
@@ -27,4 +27,8 @@ public:
 	float aspectRatio = 0;
 	float viewportWidth = 0;
 	float viewportHeight = 0;
+
+	float aperature = 0;
+	float focalLength = 0;
+	float lensRadius = 0;
 };

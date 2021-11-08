@@ -1,6 +1,4 @@
 #pragma once
-#include "Types.h"
-#include "Ray.h"
 #include "Material.h"
 
 class Geometry
